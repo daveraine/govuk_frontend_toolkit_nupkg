@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>GovUK.FrontendToolkit</id>
+        <version>1.0.0</version>
+        <authors>David Raine</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<licenseUrl>https://github.com/alphagov/govuk_frontend_toolkit/blob/master/LICENCE</licenseUrl>
+		<projectUrl>https://github.com/alphagov/govuk_frontend_toolkit/</projectUrl>
+        <description>A collection of Sass and Javascript tools for generating frontend code.</description>
+		<tags>GOV.UK ASP.NET Sass Javascript</tags>
+    </metadata>
+	<files>
+		<file src="app/assets/images/**" target="content/Content/govuk_toolkit/images/" />
+		<file src="app/assets/stylesheets/**" target="content/Content/govuk_toolkit/stylesheets/" />
+		<file src="app/assets/javascripts/**" target="content/Scripts/govuk_toolkit/" />
+	</files>
+</package>
