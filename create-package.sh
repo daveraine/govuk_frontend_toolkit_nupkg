@@ -22,13 +22,13 @@ NEW_SUBMODULE_VERSION=`cat app/assets/VERSION.txt`
 if [ "$PINNED_SUBMODULE_VERSION" != "$NEW_SUBMODULE_VERSION" ]; then
   # Check for updates to nuget.exe
   mono ./tools/nuget.exe update -self
+  wait
 
   # Commit the updated submodule and push it to origin
   git commit -am "Bump to version $NEW_SUBMODULE_VERSION"
   git push origin master
 
   # Publish the new nupkg
-  wait
   mono ./tools/nuget.exe pack GovUK.FrontendToolkit.nuspec -Version $NEW_SUBMODULE_VERSION
   # TODO - publish to nuget.org
 else
